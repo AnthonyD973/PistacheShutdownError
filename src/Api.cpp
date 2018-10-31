@@ -6,7 +6,7 @@ Api::Api(Pistache::Address addr)
     : m_httpEndpoint(addr)
     , m_desc("Bruce Lee's website", "0.1")
 {
-    auto opts = Pistache::Http::Endpoint::options();
+    auto opts = Pistache::Http::Endpoint::options().threads(1);
     m_httpEndpoint.init(opts);
 
     m_desc
