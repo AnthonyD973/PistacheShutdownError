@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git clone https://github.com/oktal/pistache
+cd pistache
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=../../build/deps .. && make -j4 && make install
